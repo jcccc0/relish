@@ -8,6 +8,10 @@ app.use(express.json());
 // For parsing application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+	res.send('Welcome here')
+})
+
 app.post('/relish', (req, res) => {
 	console.log('request->',"Body: ", req.body, "Headers",req.headers)
 	res.send()
