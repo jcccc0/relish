@@ -1,5 +1,7 @@
-import express, { Router } from "express";
-import serverless from "serverless-http";
+//import express, { Router } from "express";
+//import serverless from "serverless-http";
+const express, { Router } =  require("express");
+const serverless =  require("serverless-http");
 
 const api = express();
 
