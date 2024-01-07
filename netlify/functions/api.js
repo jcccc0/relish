@@ -1,7 +1,7 @@
 //import express, { Router } from "express";
 //import serverless from "serverless-http";
-const express, { Router } =  require("express");
-const serverless =  require("serverless-http");
+var express, { Router } =  require("express");
+var serverless =  require("serverless-http");
 
 const api = express();
 
@@ -14,4 +14,7 @@ res.send({"Body:", req.body, "Headers:" , req.headers})
 
 api.use("/api/", router);
 
-export const handler = serverless(api);
+const handler = serverless(api);
+module.exports = {
+  handler
+}
