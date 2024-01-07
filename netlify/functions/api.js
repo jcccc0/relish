@@ -14,7 +14,4 @@ res.send({"Body:", req.body, "Headers:" , req.headers})
 
 api.use("/api/", router);
 
-const handler = serverless(api);
-module.exports = {
-  handler
-}
+export const handler = serverless(api);
