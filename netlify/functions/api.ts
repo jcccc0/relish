@@ -1,5 +1,7 @@
 import type { Context } from "@netlify/functions"
 
 export default async (req: Request, context: Context) => {
-  return new Response("Hello, world!")
+  const body = req?.body;
+  const header = req?.headers;
+  return new Response("Hello, world!", body, header)
 }
