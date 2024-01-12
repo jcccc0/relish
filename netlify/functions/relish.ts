@@ -2,7 +2,7 @@ import type { Context } from "@netlify/functions"
 
 export default async (req: Request, context: Context) => {
   let response;
-  const body = await req.text();
+  const body = await req;
   
   switch(req?.method){
     case "POST":
