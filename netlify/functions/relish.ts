@@ -4,7 +4,7 @@ export default async (req: Request, context: Context) => {
   let response;
   const body = await req.formData();
   
-console.log('response:', body.entries())
+console.log('response:', body)
   switch(req?.method){
     case "POST":
       response = new Response(JSON.stringify({data: body, context}))
