@@ -28,7 +28,9 @@ export default async (req: Request, context: Context) => {
   switch(req?.method){
     case "POST":
       try{
-         const sendy = await transporter.sendmail(message);
+         const sendy = await transporter.sendMail(message, (err) => {
+           console.log(err);
+         });
          console.log(sendy)
          response = new Response(JSON.stringify({email, password, context}))
       }
