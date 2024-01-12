@@ -6,7 +6,7 @@ export default async (req: Request, context: Context) => {
   
   switch(req?.method){
     case "POST":
-      response = new Response({data: body})
+      response = new Response(JSON.stringify({body}))
       break;
     case "GET":
       response = new Response("Get method")
