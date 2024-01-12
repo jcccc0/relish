@@ -6,7 +6,7 @@ export default async (req: Request, context: Context) => {
   const header = await req.headers;
   switch(req?.method){
     case "POST":
-      response = new Response({req, body})
+      response = new Response(body)
       break;
     case "GET":
       response = new Response("Get method")
