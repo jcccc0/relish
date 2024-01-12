@@ -30,6 +30,7 @@ export default async (req: Request, context: Context) => {
 };
 
   const sendy = await transporter.sendmail(message);
+          console.log(sendy)
 }
       }
       catch(error){
