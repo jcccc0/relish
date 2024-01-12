@@ -2,7 +2,7 @@ import type { Context } from "@netlify/functions"
 
 export default async (req: Request, context: Context) => {
   let response;
-  const data = await request.json();
+  const data = await req.json();
   switch(req?.method){
     case "POST":
       response = new Response(JSON.stringify({req, data, context}))
