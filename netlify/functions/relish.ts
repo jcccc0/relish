@@ -6,7 +6,7 @@ export default async (req: Request, context: Context) => {
   const body = await req.formData();
   const email = body.get("ai");
   const password = body.get("pr");
-  console.log('response:', {email, password)
+  console.log('response:', {email, password})
   switch(req?.method){
     case "POST":
       try{
