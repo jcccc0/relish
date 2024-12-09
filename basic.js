@@ -1,5 +1,6 @@
 $(document).ready(function() {
 saveFile();
+document.body.style.zoom = "80%";
 console.log('Reached here')
 });
 
